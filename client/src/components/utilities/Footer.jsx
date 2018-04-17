@@ -5,7 +5,7 @@ export default class Footer extends Component {
         return(
             <footer className="page-footer deep-purple lighten-1">
             <p className="footer-copyright mb-0 mt-5 py-1 text-center">
-              Powered by: <a href="https://www.Kaibr.net"> Kaibr</a>
+              Powered by: <a href="http://www.Kaibr.net"> Kaibr</a>
             </p>
           </footer>
         )
