@@ -25,7 +25,7 @@ export default class Contact extends Component {
                                 <p className="h5-responsive">Need a quote for a website or app?</p>
                                 <p className="h5-responsive">Have questions about whether you need a website or app?</p>
                                 <p className="h5-responsive">Just shoot an email our way and we will be more than happy to answer any questions or set up for a meeting to discuss in more detail.</p>
-                                <p className="h5-responsive">Email us at:<br /><a className="text-secondary" href="mailto:contact@kaibr.net">contact@kaibr.net</a></p>
+                                <p className="h5-responsive">Email us at:<br /><a className="text-secondary" href="mailto:luke@kaibr.net">luke@kaibr.net</a> or <a className="text-secondary" href="mailto:matthew@kaibr.net">matthew@kaibr.net</a></p>
                             </div>
                         </div>
                     </div>
