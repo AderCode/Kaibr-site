@@ -4,25 +4,45 @@ export default class Contact extends Component {
     constructor(props) {
         super(props);
 
-        this.state = {}
+        this.state = {
+            err: null
+        }
 
     }
 
-    submit() {
-        let name = document.getElementById("ContactName").value;
-        let email = document.getElementById("ContactEmail").value;
-        let subject = document.getElementById("ContactSubject").value;
-        let message = document.getElementById("ContactMessage").value;
-        let data = {name, email, subject, message};
-        console.log(data);
+    handleSubmit() {
+        let name = this.getValue("ContactName");
+        let email = this.getValue("ContactEmail");
+        let message = this.getValue("ContactMessage");
+        let subject = this.checkSubject();
+        let validEmail = this.checkEmail(email)
+
+        validEmail && name !== "" && message !== ""
+        ?
+        this.sendInfo({name, email, subject, message})
+        :
+        this.setState({ err: "required" })
     }
 
-    // TO DO:
-    // Check for required info: Name, Email, Message
-    // Verify valid email: '@' required '.' required
-    // If no subject, replace value with 'Request For Info'
+    getValue(id) {
+        return document.getElementById(id).value;
+    }
+
+    checkSubject() {
+        let subject = this.getValue("ContactSubject");
+        return subject === "" ? "Request for Info" : subject;
+    }
+
+    checkEmail(email) {
+       return /@..../i.test(email) && /\.../i.test(email) ? true :  false
+    }
+
+    sendInfo(data) {
+        //send data to mailgun api
+    }
 
     render() {
+        let $invalid = "*Invalid email"
         return (
             <div className="container-fluid my-2 py-5">
                 <div className="row w-75 mx-auto m-5 py-5">
@@ -62,7 +82,7 @@ export default class Contact extends Component {
                                 </div>
 
                                 <div className="text-center mt-4">
-                                    <div className="btn btn-outline-secondary" onClick={() => this.submit()}>Send<i className="fa fa-paper-plane-o ml-2"></i></div>
+                                    <div className="btn btn-outline-secondary" onClick={() => this.handleSubmit()}>Send<i className="fa fa-paper-plane-o ml-2"></i></div>
                                 </div>
                             </form>
                                 </div>
