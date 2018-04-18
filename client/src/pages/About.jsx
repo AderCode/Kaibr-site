@@ -11,9 +11,8 @@ export default class About extends Component {
     render() {
 
         return (
-            <div className="container-fluid">
-
-                <div className="row w-75 mx-auto mt-5">
+            <div className="container-fluid about">
+                <div className="row mx-auto mt-5">
                     <div className="card col-md-12 my-2 mx-auto p-0">
                         <img className="view img-fluid z-depth-1-half w-100 p-0" src="https://s3.amazonaws.com/kaibr/banners/galaxy.jpg" />
                         <div className="card-body">
@@ -30,7 +29,7 @@ export default class About extends Component {
                     </div>
                 </div>
 
-                <div className="row w-75 mx-auto my-5">
+                <div className="row mx-auto my-5">
                     <div className="card col-md-12 mx-auto p-0">
                         <img className="w-50 img-fluid rounded-circle z-depth-1 mx-auto my-3" src="https://s3.amazonaws.com/kaibr/headshots/Luke.JPG" />
                         <div className="card-body">
@@ -55,7 +54,7 @@ export default class About extends Component {
                     </div>
                 </div>
 
-                <div className="row w-75 mx-auto my-5">
+                <div className="row mx-auto my-5">
                     <div className="card col-md-12 mx-auto p-0">
                         <img className="w-50 img-fluid rounded-circle z-depth-1 mx-auto my-3" src="https://s3.amazonaws.com/kaibr/headshots/Matthew.JPG" />
                         <div className="card-body">

@@ -2,3 +2,82 @@
 	flex-direction: row !important;
 	justify-content: space-around !important;
 }
+
+.homepage .display-mobile-off {
+	display: none;
+}
+
+.homepage .mobile-image-adjust {
+	padding-bottom: 23px;
+}
+
+/*FLIPPING TESTING START*/
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: initial;
+	height: initial;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}
+/*FLIPPING TESTING END*/
+
+/*DESKTOP SPECIFIC CSS ADJUSTMENTS*/
+@media only screen and (min-width: 992px) {
+	.about .row {
+		width: 75% !important;
+	}
+	.homepage .desktop-spacing {
+		padding-top: 4rem !important;
+		padding-bottom: 4rem !important;
+	}
+	.homepage .card-row {
+		width: 75% !important;
+	}
+	.homepage .display-desktop-on {
+		display: inline;
+	}
+	.homepage .display-desktop-off {
+		display: none;
+	}
+	.homepage .desktop-image-margin-left {
+		margin-left: 4rem !important;
+	}
+	.homepage .desktop-image-margin-right {
+		margin-right: 3rem !important;
+	}
+}
+

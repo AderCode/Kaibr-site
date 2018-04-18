@@ -41,7 +41,7 @@ export default class HomePage extends Component {
         return (
             <div>
                 {/* <!--CAROUSEL--> */}
-                <div id="carousel-example-2" className="carousel slide carousel-fade" data-ride="carousel">
+                <div id="carousel-example-2" className="carousel slide carousel-fade" style={{ 'marginTop': '2.5rem' }} data-ride="carousel">
                     {/* <!--Indicators--> */}
                     <ol className="carousel-indicators">
                         <li data-target="#carousel-example-2" data-slide-to="0" className="active"></li>
@@ -114,79 +114,82 @@ export default class HomePage extends Component {
                 </div>
                 {/* <!--/CAROUSEL--> */}
 
-                <div className="container-fluid mx-auto mt-5">
+                <div className="container-fluid mx-auto mt-5 homepage">
 
                     <div className="dropdown-divider w-75 mx-auto"></div>
 
                     {/* SLOGAN QUOTE */}
-                    <div className="row my-5 py-5">
-                        <p className="col-sm-12 h1-responsive text-center">"The most powerful apps have hearts of Kaibr"</p></div>
-
+                    <div className="row my-5 desktop-spacing">
+                        <p className="col-sm-12 h1-responsive text-center m-0">"The most powerful apps have hearts of Kaibr"</p>
+                    </div>
                     <div className="dropdown-divider w-75 mx-auto"></div>
 
                     {/* WEBSITE SECTION */}
-                    <div className="row m-5 py-5">
+                    <div className="row desktop-spacing">
                         <div className="col-md-4">
-                            <img className="view img-fluid" src="https://s3.amazonaws.com/kaibr/icons/web.png" />
+                            <img className="view img-fluid desktop-image-margin-left" src="https://s3.amazonaws.com/kaibr/icons/web.png" />
                         </div>
-
-                        <div className="col-md-8 h1-responsive my-auto py-5 font-weight-bold font-italic text-center">
-
+                        <div className="col-md-8 h1-responsive my-auto desktop-spacing font-weight-bold font-italic text-center">
                             <p>Powerful Responsive Websites</p>
                             <p>Multi-Browser Capabilities</p>
-                            <p>Mobile Friendly</p>
-
+                            <p className="mb-0">Mobile Friendly</p>
                         </div>
-
                     </div>
-
-                    <div className="dropdown-divider w-75 mx-auto"></div>
+                    <div className="dropdown-divider w-75 mx-auto my-5"></div>
 
                     {/* MOBILE SECTION */}
-                    <div className="row m-5 py-5">
+                    <div className="row desktop-spacing">
 
-                        <div className="col-md-8 h2-responsive my-auto py-5 font-weight-bold font-italic text-center">
+                        {/*MOBILE*/}
+                        <div className="col-md-4 display-desktop-off">
+                            <img className="view img-fluid mobile-image-adjust" src="https://s3.amazonaws.com/kaibr/icons/mobile.jpg" />
+                        </div>
+                        {/*MOBILE*/}
+                        <div className="col-md-8 h2-responsive my-auto desktop-spacing font-weight-bold font-italic text-center">
                             <p>Native Android and iOS Apps</p>
                             <p>Reliable and Resilient</p>
                             <p>Android/Apple Store Ready</p>
                         </div>
-
-                        <div className="col-md-4 pt-5">
-                            <img className="view img-fluid d-inline" src="https://s3.amazonaws.com/kaibr/icons/mobile.jpg" />
+                        {/*DESKTOP*/}
+                        <div className="col-md-4 display-mobile-off display-desktop-on">
+                            <img className="view img-fluid" style={{ 'paddingRight': '4rem' }} src="https://s3.amazonaws.com/kaibr/icons/mobile.jpg" />
                         </div>
-
+                        {/*DESKTOP*/}
                     </div>
-
-                    <div className="dropdown-divider w-75 mx-auto"></div>
+                    <div className="dropdown-divider w-75 mx-auto my-5"></div>
 
                     {/* BRIEF ABOUTS */}
-                    <h1 className="h1-responsive mx-auto col-sm-12 mt-5 text-center font-italic">~ Our Team ~</h1>
-                    <div className="row w-75 mx-auto mb-5 mx-5 py-5">
-                        <div className="card col-md-3 my-2 mx-auto">
+                    <h1 className="h1-responsive mx-auto col-sm-12 text-center font-italic mb-0">~ Our Team ~</h1>
+                    <div className="row card-row mx-auto my-5">
+
+                        {/*Kaibr Content Card*/}
+                        <div className="card col-md-3 mx-auto mb-2">
                             <div className="view overlay px-2">
                                 <img className="card-img-top img-fluid z-depth-1-half p-3 rounded-circle mx-auto my-3" src="https://s3.amazonaws.com/kaibr/logo/TEMP_LOGO_sq.png" alt="Card image cap" />
                             </div>
                             <div className="card-body">
                                 <h4 className="card-title text-center">Kaibr</h4>
-                                <p className="card-text">The driving force behind everything we do, Kaibr, represents our love for nerdy things.</p>
+                                <p className="card-text text-center">The driving force behind everything we do, Kaibr, represents our love for nerdy things.</p>
                             </div>
                         </div>
-                        <div className="card col-md-3 my-2 mx-auto">
+                        {/*Kaibr Content Card*/}
+
+                        <div className="card col-md-3 mx-auto mb-2">
                             <div className="view overlay px-2">
                                 <img className="card-img-top img-fluid z-depth-1-half rounded-circle mx-auto my-3" src="https://s3.amazonaws.com/kaibr/headshots/Luke.JPG" alt="Card image cap" />
                             </div>
                             <div className="card-body">
                                 <h4 className="card-title text-center">Luke Przekwas</h4>
-                                <p className="card-text">"My passion for learning and my enthusiasm in helping others is at the heart of my code."</p>
+                                <p className="card-text text-center">"My passion for learning and my enthusiasm in helping others is at the heart of my code."</p>
                             </div>
                         </div>
-                        <div className="card col-md-3 my-2 mx-auto">
+                        <div className="card col-md-3 mx-auto mb-2">
                             <div className="view overlay px-2">
                                 <img className="card-img-top img-fluid z-depth-1-half rounded-circle mx-auto my-3" src="https://s3.amazonaws.com/kaibr/headshots/Matthew.JPG" alt="Card image cap" />
                             </div>
                             <div className="card-body">
                                 <h4 className="card-title text-center">Matthew Aderhold</h4>
-                                <p className="card-text">"Development is more than a career for me; it's fun, challenging, and rewarding."</p>
+                                <p className="card-text text-center">"Development is more than a career for me; it's fun, challenging, and rewarding."</p>
                             </div>
                         </div>
                     </div>
@@ -194,7 +197,7 @@ export default class HomePage extends Component {
 
 
                     {/* PREVIOUS CLIENTS LOGOS */}
-                    {/* <div className="row m-5 py-5">
+                    {/* <div className="row m-5 desktop-spacing">
 
                     <div className="col-sm-2">
                         <img className="img-fluid" src="http://via.placeholder.com/200x200" />
@@ -222,7 +225,7 @@ export default class HomePage extends Component {
 
                     </div> */}
 
-                </div>
+                </div >
 
             </div >
         )
