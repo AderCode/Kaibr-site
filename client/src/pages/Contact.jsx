@@ -70,18 +70,18 @@ export default class Contact extends Component {
         let $messageRequired = this.state.messageErr ? <span className="d-inline text-danger"> *Required</span> : false;
         let $thanks = this.state.isSubmitted ? <p className="text-success">Thank you for your interest!</p> : <p>  </p>
         return (
-            <div className="container-fluid my-2 py-5">
-                <div className="row w-75 mx-auto m-5 py-5">
-                    <div className="card col-md-12 px-0 my-2 mx-auto container-fluid">
+            <div className="container-fluid my-5 py-5 contact">
+                <div className="row mx-auto desktop-spacing">
+                    <div className="card col-md-12">
                         <div className="card-body row mx-auto w-100">
-                            <div className="view overlay mx-auto">
-                                <img className="card-img-top col-md-3 img-fluid rounded-circle mx-auto" src="https://s3.amazonaws.com/kaibr/logo/TEMP_LOGO.png" width="300" />
+                            <div className="view overlay mx-auto display-mobile-off display-desktop-on">
+                                <img className="col-md-3 img-fluid" src="https://s3.amazonaws.com/kaibr/logo/TEMP_LOGO.png" width="300" />
                             </div>
-                            <div className="col-md-8 my-1 mx-auto my-auto">
-                                <p className="card-title mx-auto w-75 pb-2 h1-responsive text-center">
+                            <div className="col-md-8 mx-auto my-auto">
+                                <p className="card-title mx-auto pb-2 h1-responsive text-center">
                                     Request Info
                                 </p>
-                                <form id="ContactForm" className="mx-auto w-75">
+                                <form id="ContactForm" className="mx-auto">
 
                                     <div className="md-form">
                                         <i className="fa fa-user prefix grey-text"></i>

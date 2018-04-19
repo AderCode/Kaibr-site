@@ -1,3 +1,6 @@
+/********************/
+/*MOBILE ADJUSTMENTS*/
+/********************/
 .navbar-nav {
 	flex-direction: row !important;
 	justify-content: space-around !important;
@@ -11,7 +14,13 @@
 	padding-bottom: 23px;
 }
 
+.contact .display-mobile-off {
+	display: none;
+}
+
+/************************/
 /*FLIPPING TESTING START*/
+/************************/
 /* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000px;
@@ -36,7 +45,6 @@
 /* hide back of pane during swap */
 .front, .back {
 	backface-visibility: hidden;
-
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -53,9 +61,10 @@
 .back {
 	transform: rotateY(180deg);
 }
-/*FLIPPING TESTING END*/
 
+/**********************************/
 /*DESKTOP SPECIFIC CSS ADJUSTMENTS*/
+/**********************************/
 @media only screen and (min-width: 992px) {
 	.about .row {
 		width: 75% !important;
@@ -78,6 +87,16 @@
 	}
 	.homepage .desktop-image-margin-right {
 		margin-right: 3rem !important;
+	}
+	.contact .desktop-spacing {
+		padding-top: 4rem !important;
+		padding-bottom: 4rem !important;
+	}
+	.contact .row {
+		width: 75% !important;
+	}
+	.contact .display-desktop-on {
+		display: inline;
 	}
 }
 
