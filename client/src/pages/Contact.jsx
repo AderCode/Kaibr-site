@@ -69,8 +69,13 @@ export default class Contact extends Component {
         let $nameRequired = this.state.nameErr ? <span className="d-inline text-danger"> *Required</span> : false;
         let $messageRequired = this.state.messageErr ? <span className="d-inline text-danger"> *Required</span> : false;
         let $thanks = this.state.isSubmitted ? <p className="text-success">Thank you for your interest!</p> : <p>  </p>
+        window.addEventListener("resize", () => document.getElementById("main").style.minHeight = `${window.innerHeight - 125}px`)
         return (
-            <div className="container-fluid my-5 py-5 contact">
+            <div
+                id="main"
+                onLoad={() => document.getElementById("main").style.minHeight = `${window.innerHeight - 125}px`}
+                className="container-fluid my-5 py-5 contact"
+                >
                 <div className="row mx-auto desktop-spacing">
                     <div className="card col-md-12">
                         <div className="card-body row mx-auto w-100">
@@ -139,8 +144,8 @@ export default class Contact extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
-        )
-    }
-
+            </ div>
+                )
+            }
+        
 }
