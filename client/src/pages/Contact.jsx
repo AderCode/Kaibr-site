@@ -76,7 +76,7 @@ export default class Contact extends Component {
                 onLoad={() => document.getElementById("main").style.minHeight = `${window.innerHeight - 125}px`}
                 className="container-fluid my-5 py-5 contact"
                 >
-                <div className="row mx-auto desktop-spacing">
+                <div className="card-row row mx-auto desktop-spacing">
                     <div className="card col-md-12">
                         <div className="card-body row mx-auto w-100">
                             <div className="view overlay mx-auto display-mobile-off display-desktop-on">

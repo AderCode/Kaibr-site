@@ -65,7 +65,7 @@
 /**********************************/
 /*DESKTOP SPECIFIC CSS ADJUSTMENTS*/
 /**********************************/
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1025px) {
 	.about .row {
 		width: 75% !important;
 	}
@@ -92,7 +92,7 @@
 		padding-top: 4rem !important;
 		padding-bottom: 4rem !important;
 	}
-	.contact .row {
+	.contact .card-row {
 		width: 75% !important;
 	}
 	.contact .display-desktop-on {
